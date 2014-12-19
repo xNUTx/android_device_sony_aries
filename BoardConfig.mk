@@ -16,19 +16,20 @@
 include device/sony/shinano-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
-#-include vendor/sony/z3c/BoardConfigVendor.mk
+#-include vendor/sony/aries/BoardConfigVendor.mk
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := D5803,D5833,z3c
 
-TARGET_SPECIFIC_HEADER_PATH += device/sony/z3c/include
+TARGET_SPECIFIC_HEADER_PATH += device/sony/aries/include
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/z3c/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/sony/aries/bluetooth
 
-BOARD_HARDWARE_CLASS += device/sony/z3c/cmhw
+BOARD_HARDWARE_CLASS += device/sony/aries/cmhw
 
 # Kernel properties
-TARGET_KERNEL_CONFIG := cm_shinano_aries_defconfig
+#TARGET_KERNEL_CONFIG := cm_shinano_aries_defconfig
+TARGET_PREBUILT_KERNEL := device/sony/aries/kernel
 
 # Partition information
 BOARD_VOLD_MAX_PARTITIONS := 25
